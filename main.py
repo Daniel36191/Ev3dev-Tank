@@ -9,6 +9,7 @@ from ev3dev2.button import Button
 from ev3dev2.sensor import *
 from ev3dev2.sensor.lego import *
 from ev3dev2.sensor.virtual import *
+from ev3dev2.leds import Leds
 
 # Create the sensors and motors objects
 motorA = LargeMotor(OUTPUT_A)
@@ -26,5 +27,9 @@ obtr = ObjectTracker()
 gyro_sensor_in1 = GyroSensor(INPUT_1)
 
 
-# Here is where your code starts
+while True:
+    if Button.down:
+        leds.set_color("LEFT", "GREEN")
+    else:
+        leds.set_color("LEFT", "RED")
 
