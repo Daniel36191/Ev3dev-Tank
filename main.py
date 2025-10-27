@@ -88,3 +88,7 @@ while True:
     print("Moves Recorded:", movesteps)
     print("Replay Moves")
     move_steps()
+
+while True:
+    text_pixels(movesteps(len(movesteps)-1), clear_screen=False, x=0, y=0, text_color='black', font= 'luBS14')
+    time.sleep(0.5)
